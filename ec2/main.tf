@@ -79,7 +79,7 @@ if ! grep -q "${aws_instance.prj-vm[0].public_ip}" ansible/inventory/hosts 2>/de
   if ! grep -q "^\[artifactory\]" ansible/inventory/hosts 2>/dev/null; then
     echo "[artifactory]" >> ansible/inventory/hosts
   fi
-  echo "$HOST_ENTRY" >> ansible/inventory/hosts
+  echo "$HOST_ENTRY" > ansible/inventory/hosts
   echo "Appended host: $HOST_ENTRY"
 else
   echo "Host already exists in inventory."
