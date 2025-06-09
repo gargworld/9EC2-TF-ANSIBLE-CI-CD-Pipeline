@@ -34,7 +34,7 @@ credit:
 **originally forked from:** https://github.com/Keerthibb/Terraform-Jenkins-Ansible-Docker-CI-CD-Pipeline
 
 
-Manual commands :
+**Manual commands :**
 
 docker-compose -f /root/artifactory/docker-compose.yml up -d
 docker-compose down -v
