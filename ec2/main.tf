@@ -9,13 +9,12 @@ resource "aws_instance" "prj-vm" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "Satyam_Docker-server-${count.index}"
+    Name = "artifactory-${count.index}"
   }
 
   user_data = <<-EOF
               #!/bin/bash
               yum update -y
-              amazon-linux-extras enable epel
               yum clean metadata
               yum install -y epel-release
               yum install -y ansible python3
