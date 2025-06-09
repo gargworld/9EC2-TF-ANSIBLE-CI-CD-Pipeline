@@ -17,7 +17,17 @@
 
 - name: Clean all yum metadata
   command: yum clean metadata
-
+  
+- name: Ensure public DNS entries exist in /etc/resolv.conf
+  lineinfile:
+    path: /etc/resolv.conf
+    line: "{{ item }}"
+    state: present
+    insertafter: EOF
+  loop:
+    - "nameserver 8.8.8.8"
+    - "nameserver 8.8.4.4"
+  
 - name: Install required dependencies
   package:
     name:
