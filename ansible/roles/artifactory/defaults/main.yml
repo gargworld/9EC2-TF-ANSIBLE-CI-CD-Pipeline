@@ -1,0 +1,2 @@
+docker_compose_path: /data/artifactory
+artifactory_compose_file: /data/artifactory/docker-compose.yml
