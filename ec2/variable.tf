@@ -31,7 +31,7 @@ variable "security_group_value" {
 variable "key_name" {
   description = "Name of the existing AWS key pair"
   type        = string
-  default     = "artifactory.pem"
+  default     = "artifactory"
   }
 
 variable "ansible_user" {
